@@ -3,13 +3,20 @@ import { Header } from "@/components/Header";
 import { TextInput } from "@/components/TextInput";
 import { FontCategory } from "@/components/FontCategory";
 import { fontStyles, categories } from "@/lib/fontTransformers";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 const Index = () => {
   const [inputText, setInputText] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const getFontsByCategory = (categoryId: string) => {
     return fontStyles.filter((font) => font.category === categoryId);
   };
+
+  const filteredCategories = selectedCategory 
+    ? categories.filter(c => c.id === selectedCategory)
+    : categories;
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,7 +32,33 @@ const Index = () => {
         <main>
           <TextInput value={inputText} onChange={setInputText} />
           
-          {categories.map((category) => (
+          {/* Category Filter */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            <Button
+              variant={selectedCategory === null ? "default" : "outline"}
+              size="sm"
+              onClick={() => setSelectedCategory(null)}
+              className="rounded-full"
+            >
+              All Fonts
+              <ChevronDown className="w-4 h-4 ml-1" />
+            </Button>
+            {categories.map((category) => (
+              <Button
+                key={category.id}
+                variant={selectedCategory === category.id ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCategory(
+                  selectedCategory === category.id ? null : category.id
+                )}
+                className="rounded-full"
+              >
+                {category.name}
+              </Button>
+            ))}
+          </div>
+          
+          {filteredCategories.map((category) => (
             <FontCategory
               key={category.id}
               title={category.name}
@@ -35,8 +68,8 @@ const Index = () => {
           ))}
         </main>
 
-        <footer className="text-center py-8 text-muted-foreground text-sm">
-          <p>Type any text above to see it transformed into stylish fonts</p>
+        <footer className="text-center py-8 text-muted-foreground text-sm border-t border-border/50 mt-12">
+          <p>Type any text above to see it transformed into {fontStyles.length}+ stylish fonts</p>
         </footer>
       </div>
     </div>

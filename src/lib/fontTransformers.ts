@@ -11,6 +11,16 @@ const charMaps: Record<string, Record<string, string>> = {
     'q': 'ᑫ', 'r': 'ᖇ', 's': 'ᔕ', 't': 'T', 'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭',
     'y': 'Y', 'z': 'ᘔ'
   },
+  symbolic: {
+    'A': 'ꍏ', 'B': 'ꌃ', 'C': 'ꉓ', 'D': 'ꀸ', 'E': 'ꏂ', 'F': 'ꎇ', 'G': 'ꁅ', 'H': 'ꀍ',
+    'I': 'ꀤ', 'J': 'ꀭ', 'K': 'ꀘ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꈤ', 'O': 'ꂦ', 'P': 'ꉣ',
+    'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌗ', 'T': '꓄', 'U': 'ꀎ', 'V': 'ꃴ', 'W': 'ꅏ', 'X': '꒼',
+    'Y': 'ꌩ', 'Z': 'ꁴ',
+    'a': 'ꍏ', 'b': 'ꌃ', 'c': 'ꉓ', 'd': 'ꀸ', 'e': 'ꏂ', 'f': 'ꎇ', 'g': 'ꁅ', 'h': 'ꀍ',
+    'i': 'ꀤ', 'j': 'ꀭ', 'k': 'ꀘ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꈤ', 'o': 'ꂦ', 'p': 'ꉣ',
+    'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌗ', 't': '꓄', 'u': 'ꀎ', 'v': 'ꃴ', 'w': 'ꅏ', 'x': '꒼',
+    'y': 'ꌩ', 'z': 'ꁴ'
+  },
   cursive: {
     'A': '𝒜', 'B': 'ℬ', 'C': '𝒞', 'D': '𝒟', 'E': 'ℰ', 'F': 'ℱ', 'G': '𝒢', 'H': 'ℋ',
     'I': 'ℐ', 'J': '𝒥', 'K': '𝒦', 'L': 'ℒ', 'M': 'ℳ', 'N': '𝒩', 'O': '𝒪', 'P': '𝒫',
@@ -61,6 +71,36 @@ const charMaps: Record<string, Record<string, string>> = {
     'i': '𝖎', 'j': '𝖏', 'k': '𝖐', 'l': '𝖑', 'm': '𝖒', 'n': '𝖓', 'o': '𝖔', 'p': '𝖕',
     'q': '𝖖', 'r': '𝖗', 's': '𝖘', 't': '𝖙', 'u': '𝖚', 'v': '𝖛', 'w': '𝖜', 'x': '𝖝',
     'y': '𝖞', 'z': '𝖟'
+  },
+  historical: {
+    'A': 'ꍏ', 'B': 'ꌃ', 'C': 'ꉓ', 'D': 'ꀸ', 'E': 'ꏂ', 'F': 'ꎇ', 'G': 'ꁅ', 'H': 'ꃅ',
+    'I': 'ꀤ', 'J': 'ꀭ', 'K': 'ꀘ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꈤ', 'O': 'ꂦ', 'P': 'ꉣ',
+    'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌗ', 'T': '꓄', 'U': 'ꀎ', 'V': 'ꃴ', 'W': 'ꅏ', 'X': '꒼',
+    'Y': 'ꌩ', 'Z': 'ꁴ',
+    'a': 'ꍏ', 'b': 'ꌃ', 'c': 'ꉓ', 'd': 'ꀸ', 'e': 'ꏂ', 'f': 'ꎇ', 'g': 'ꁅ', 'h': 'ꃅ',
+    'i': 'ꀤ', 'j': 'ꀭ', 'k': 'ꀘ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꈤ', 'o': 'ꂦ', 'p': 'ꉣ',
+    'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌗ', 't': '꓄', 'u': 'ꀎ', 'v': 'ꃴ', 'w': 'ꅏ', 'x': '꒼',
+    'y': 'ꌩ', 'z': 'ꁴ'
+  },
+  tribal: {
+    'A': 'ል', 'B': 'ጌ', 'C': 'ር', 'D': 'ዕ', 'E': 'ቿ', 'F': 'ቻ', 'G': 'ኗ', 'H': 'ዘ',
+    'I': 'ጎ', 'J': 'ጋ', 'K': 'ጕ', 'L': 'ረ', 'M': 'ጠ', 'N': 'ክ', 'O': 'ዐ', 'P': 'የ',
+    'Q': 'ቀ', 'R': 'ዪ', 'S': 'ነ', 'T': 'ፕ', 'U': 'ሁ', 'V': 'ቭ', 'W': 'ሠ', 'X': 'ሸ',
+    'Y': 'ሃ', 'Z': 'ጊ',
+    'a': 'ል', 'b': 'ጌ', 'c': 'ር', 'd': 'ዕ', 'e': 'ቿ', 'f': 'ቻ', 'g': 'ኗ', 'h': 'ዘ',
+    'i': 'ጎ', 'j': 'ጋ', 'k': 'ጕ', 'l': 'ረ', 'm': 'ጠ', 'n': 'ክ', 'o': 'ዐ', 'p': 'የ',
+    'q': 'ቀ', 'r': 'ዪ', 's': 'ነ', 't': 'ፕ', 'u': 'ሁ', 'v': 'ቭ', 'w': 'ሠ', 'x': 'ሸ',
+    'y': 'ሃ', 'z': 'ጊ'
+  },
+  graceful: {
+    'A': 'α', 'B': 'Ⴆ', 'C': 'ƈ', 'D': 'ԃ', 'E': 'ҽ', 'F': 'ϝ', 'G': 'ɠ', 'H': 'ԋ',
+    'I': 'ι', 'J': 'ʝ', 'K': 'ƙ', 'L': 'ʅ', 'M': 'ɱ', 'N': 'ɳ', 'O': 'σ', 'P': 'ρ',
+    'Q': 'ϙ', 'R': 'ɾ', 'S': 'ʂ', 'T': 'ƚ', 'U': 'υ', 'V': 'ʋ', 'W': 'ɯ', 'X': 'x',
+    'Y': 'ყ', 'Z': 'ȥ',
+    'a': 'α', 'b': 'Ⴆ', 'c': 'ƈ', 'd': 'ԃ', 'e': 'ҽ', 'f': 'ϝ', 'g': 'ɠ', 'h': 'ԋ',
+    'i': 'ι', 'j': 'ʝ', 'k': 'ƙ', 'l': 'ʅ', 'm': 'ɱ', 'n': 'ɳ', 'o': 'σ', 'p': 'ρ',
+    'q': 'ϙ', 'r': 'ɾ', 's': 'ʂ', 't': 'ƚ', 'u': 'υ', 'v': 'ʋ', 'w': 'ɯ', 'x': 'x',
+    'y': 'ყ', 'z': 'ȥ'
   },
   bold: {
     'A': '𝐀', 'B': '𝐁', 'C': '𝐂', 'D': '𝐃', 'E': '𝐄', 'F': '𝐅', 'G': '𝐆', 'H': '𝐇',
@@ -169,6 +209,16 @@ const charMaps: Record<string, Record<string, string>> = {
     'y': 'ⓨ', 'z': 'ⓩ',
     '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'
   },
+  darkBubble: {
+    'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔', 'F': '🅕', 'G': '🅖', 'H': '🅗',
+    'I': '🅘', 'J': '🅙', 'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞', 'P': '🅟',
+    'Q': '🅠', 'R': '🅡', 'S': '🅢', 'T': '🅣', 'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧',
+    'Y': '🅨', 'Z': '🅩',
+    'a': '🅐', 'b': '🅑', 'c': '🅒', 'd': '🅓', 'e': '🅔', 'f': '🅕', 'g': '🅖', 'h': '🅗',
+    'i': '🅘', 'j': '🅙', 'k': '🅚', 'l': '🅛', 'm': '🅜', 'n': '🅝', 'o': '🅞', 'p': '🅟',
+    'q': '🅠', 'r': '🅡', 's': '🅢', 't': '🅣', 'u': '🅤', 'v': '🅥', 'w': '🅦', 'x': '🅧',
+    'y': '🅨', 'z': '🅩'
+  },
   square: {
     'A': '🄰', 'B': '🄱', 'C': '🄲', 'D': '🄳', 'E': '🄴', 'F': '🄵', 'G': '🄶', 'H': '🄷',
     'I': '🄸', 'J': '🄹', 'K': '🄺', 'L': '🄻', 'M': '🄼', 'N': '🄽', 'O': '🄾', 'P': '🄿',
@@ -199,12 +249,6 @@ const charMaps: Record<string, Record<string, string>> = {
     'Q': 'ǫ', 'R': 'ʀ', 'S': 's', 'T': 'ᴛ', 'U': 'ᴜ', 'V': 'ᴠ', 'W': 'ᴡ', 'X': 'x',
     'Y': 'ʏ', 'Z': 'ᴢ'
   },
-  subscript: {
-    'a': 'ₐ', 'e': 'ₑ', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ', 'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ',
-    'n': 'ₙ', 'o': 'ₒ', 'p': 'ₚ', 'r': 'ᵣ', 's': 'ₛ', 't': 'ₜ', 'u': 'ᵤ', 'v': 'ᵥ',
-    'x': 'ₓ',
-    '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉'
-  },
   superscript: {
     'a': 'ᵃ', 'b': 'ᵇ', 'c': 'ᶜ', 'd': 'ᵈ', 'e': 'ᵉ', 'f': 'ᶠ', 'g': 'ᵍ', 'h': 'ʰ',
     'i': 'ⁱ', 'j': 'ʲ', 'k': 'ᵏ', 'l': 'ˡ', 'm': 'ᵐ', 'n': 'ⁿ', 'o': 'ᵒ', 'p': 'ᵖ',
@@ -215,6 +259,12 @@ const charMaps: Record<string, Record<string, string>> = {
     'U': 'ᵁ', 'V': 'ⱽ', 'W': 'ᵂ',
     '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹'
   },
+  subscript: {
+    'a': 'ₐ', 'e': 'ₑ', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ', 'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ',
+    'n': 'ₙ', 'o': 'ₒ', 'p': 'ₚ', 'r': 'ᵣ', 's': 'ₛ', 't': 'ₜ', 'u': 'ᵤ', 'v': 'ᵥ',
+    'x': 'ₓ',
+    '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉'
+  },
   upsideDown: {
     'a': 'ɐ', 'b': 'q', 'c': 'ɔ', 'd': 'p', 'e': 'ǝ', 'f': 'ɟ', 'g': 'ƃ', 'h': 'ɥ',
     'i': 'ᴉ', 'j': 'ɾ', 'k': 'ʞ', 'l': 'l', 'm': 'ɯ', 'n': 'u', 'o': 'o', 'p': 'd',
@@ -224,11 +274,8 @@ const charMaps: Record<string, Record<string, string>> = {
     'I': 'I', 'J': 'ſ', 'K': 'ʞ', 'L': '˥', 'M': 'W', 'N': 'N', 'O': 'O', 'P': 'Ԁ',
     'Q': 'Q', 'R': 'ɹ', 'S': 'S', 'T': '⊥', 'U': '∩', 'V': 'Λ', 'W': 'M', 'X': 'X',
     'Y': '⅄', 'Z': 'Z',
-    '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ', '4': 'ㄣ', '5': 'ϛ', '6': '9', '7': 'ㄥ', '8': '8', '9': '6', '0': '0',
-    '.': '˙', ',': '\'', '\'': ',', '"': '„', '`': ',', '?': '¿', '!': '¡', '[': ']', ']': '[',
-    '(': ')', ')': '(', '{': '}', '}': '{', '<': '>', '>': '<', '&': '⅋', '_': '‾'
+    '1': 'Ɩ', '2': 'ᄅ', '3': 'Ɛ', '4': 'ㄣ', '5': 'ϛ', '6': '9', '7': 'ㄥ', '8': '8', '9': '6', '0': '0'
   },
-  strikethrough: {},
   parenthesized: {
     'A': '🄐', 'B': '🄑', 'C': '🄒', 'D': '🄓', 'E': '🄔', 'F': '🄕', 'G': '🄖', 'H': '🄗',
     'I': '🄘', 'J': '🄙', 'K': '🄚', 'L': '🄛', 'M': '🄜', 'N': '🄝', 'O': '🄞', 'P': '🄟',
@@ -237,8 +284,7 @@ const charMaps: Record<string, Record<string, string>> = {
     'a': '⒜', 'b': '⒝', 'c': '⒞', 'd': '⒟', 'e': '⒠', 'f': '⒡', 'g': '⒢', 'h': '⒣',
     'i': '⒤', 'j': '⒥', 'k': '⒦', 'l': '⒧', 'm': '⒨', 'n': '⒩', 'o': '⒪', 'p': '⒫',
     'q': '⒬', 'r': '⒭', 's': '⒮', 't': '⒯', 'u': '⒰', 'v': '⒱', 'w': '⒲', 'x': '⒳',
-    'y': '⒴', 'z': '⒵',
-    '1': '⑴', '2': '⑵', '3': '⑶', '4': '⑷', '5': '⑸', '6': '⑹', '7': '⑺', '8': '⑻', '9': '⑼', '0': '⑽'
+    'y': '⒴', 'z': '⒵'
   },
   vintage: {
     'A': 'Ꭿ', 'B': 'Ᏸ', 'C': 'Ꮳ', 'D': 'Ꮄ', 'E': 'Ꮛ', 'F': 'Ꮀ', 'G': 'Ꮆ', 'H': 'Ꮒ',
@@ -249,45 +295,260 @@ const charMaps: Record<string, Record<string, string>> = {
     'i': 'Ꭵ', 'j': 'Ꮰ', 'k': 'Ꮶ', 'l': 'Ꮭ', 'm': 'Ꮇ', 'n': 'Ꮑ', 'o': 'Ꮎ', 'p': 'Ꭾ',
     'q': 'Ꭴ', 'r': 'Ꮢ', 's': 'Ꮥ', 't': 'Ꮦ', 'u': 'Ꮜ', 'v': 'Ꮙ', 'w': 'Ꮗ', 'x': '᙭',
     'y': 'Ꭹ', 'z': 'Ꮓ'
+  },
+  cute: {
+    'A': 'ꍏ', 'B': 'ꌃ', 'C': 'ꏳ', 'D': 'ꀷ', 'E': 'ꏂ', 'F': 'ꎇ', 'G': 'ꁅ', 'H': 'ꀍ',
+    'I': 'ꀤ', 'J': 'ꀭ', 'K': 'ꀘ', 'L': '꒒', 'M': 'ꂵ', 'N': 'ꋊ', 'O': 'ꂦ', 'P': 'ꉣ',
+    'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌗ', 'T': '꓄', 'U': 'ꀎ', 'V': 'ꃴ', 'W': 'ꅏ', 'X': '꒼',
+    'Y': 'ꌩ', 'Z': 'ꁴ',
+    'a': 'ꍏ', 'b': 'ꌃ', 'c': 'ꏳ', 'd': 'ꀷ', 'e': 'ꏂ', 'f': 'ꎇ', 'g': 'ꁅ', 'h': 'ꀍ',
+    'i': 'ꀤ', 'j': 'ꀭ', 'k': 'ꀘ', 'l': '꒒', 'm': 'ꂵ', 'n': 'ꋊ', 'o': 'ꂦ', 'p': 'ꉣ',
+    'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌗ', 't': '꓄', 'u': 'ꀎ', 'v': 'ꃴ', 'w': 'ꅏ', 'x': '꒼',
+    'y': 'ꌩ', 'z': 'ꁴ'
+  },
+  wavy: {
+    'A': 'ꋬ', 'B': 'ꃳ', 'C': 'ꀯ', 'D': 'ꁕ', 'E': 'ꏂ', 'F': 'ꄘ', 'G': 'ꁍ', 'H': 'ꀍ',
+    'I': 'ꂑ', 'J': 'ꀭ', 'K': 'ꀗ', 'L': '꒒', 'M': 'ꁒ', 'N': 'ꁹ', 'O': 'ꁏ', 'P': 'ꉣ',
+    'Q': 'ꁷ', 'R': 'ꋪ', 'S': 'ꌚ', 'T': '꓄', 'U': 'ꐇ', 'V': 'ꃴ', 'W': 'ꅐ', 'X': '꒺',
+    'Y': 'ꐞ', 'Z': 'ꁴ',
+    'a': 'ꋬ', 'b': 'ꃳ', 'c': 'ꀯ', 'd': 'ꁕ', 'e': 'ꏂ', 'f': 'ꄘ', 'g': 'ꁍ', 'h': 'ꀍ',
+    'i': 'ꂑ', 'j': 'ꀭ', 'k': 'ꀗ', 'l': '꒒', 'm': 'ꁒ', 'n': 'ꁹ', 'o': 'ꁏ', 'p': 'ꉣ',
+    'q': 'ꁷ', 'r': 'ꋪ', 's': 'ꌚ', 't': '꓄', 'u': 'ꐇ', 'v': 'ꃴ', 'w': 'ꅐ', 'x': '꒺',
+    'y': 'ꐞ', 'z': 'ꁴ'
+  },
+  eastern: {
+    'A': '卂', 'B': '乃', 'C': '匚', 'D': 'ᗪ', 'E': '乇', 'F': '千', 'G': 'ᘜ', 'H': '卄',
+    'I': '丨', 'J': 'ﾌ', 'K': 'Ҝ', 'L': 'ㄥ', 'M': '爪', 'N': '几', 'O': 'ㄖ', 'P': '卩',
+    'Q': 'Ɋ', 'R': '尺', 'S': '丂', 'T': 'ㄒ', 'U': 'ㄩ', 'V': 'ᐯ', 'W': '山', 'X': '乂',
+    'Y': 'ㄚ', 'Z': '乙',
+    'a': '卂', 'b': '乃', 'c': '匚', 'd': 'ᗪ', 'e': '乇', 'f': '千', 'g': 'ᘜ', 'h': '卄',
+    'i': '丨', 'j': 'ﾌ', 'k': 'Ҝ', 'l': 'ㄥ', 'm': '爪', 'n': '几', 'o': 'ㄖ', 'p': '卩',
+    'q': 'Ɋ', 'r': '尺', 's': '丂', 't': 'ㄒ', 'u': 'ㄩ', 'v': 'ᐯ', 'w': '山', 'x': '乂',
+    'y': 'ㄚ', 'z': '乙'
+  },
+  blendedAsian: {
+    'A': 'ﾑ', 'B': '乃', 'C': '匚', 'D': 'り', 'E': '乇', 'F': 'ｷ', 'G': 'ﻮ', 'H': 'ん',
+    'I': 'ﾉ', 'J': 'ﾌ', 'K': 'ズ', 'L': 'ﾚ', 'M': '爪', 'N': '刀', 'O': 'の', 'P': 'ｱ',
+    'Q': 'Q', 'R': '尺', 'S': '丂', 'T': 'ｲ', 'U': 'ひ', 'V': 'ᐯ', 'W': 'W', 'X': '✖',
+    'Y': 'ﾘ', 'Z': '乙',
+    'a': 'ﾑ', 'b': '乃', 'c': '匚', 'd': 'り', 'e': '乇', 'f': 'ｷ', 'g': 'ﻮ', 'h': 'ん',
+    'i': 'ﾉ', 'j': 'ﾌ', 'k': 'ズ', 'l': 'ﾚ', 'm': '爪', 'n': '刀', 'o': 'の', 'p': 'ｱ',
+    'q': 'Q', 'r': '尺', 's': '丂', 't': 'ｲ', 'u': 'ひ', 'v': 'ᐯ', 'w': 'W', 'x': '✖',
+    'y': 'ﾘ', 'z': '乙'
+  },
+  soft: {
+    'A': 'ꌚ', 'B': 'ꃳ', 'C': 'ꏸ', 'D': 'ꁕ', 'E': 'ꏂ', 'F': 'ꄙ', 'G': 'ꁍ', 'H': 'ꀍ',
+    'I': 'ꂑ', 'J': 'ꀪ', 'K': 'ꀗ', 'L': '꒒', 'M': 'ꁒ', 'N': 'ꁹ', 'O': 'ꁏ', 'P': 'ꉣ',
+    'Q': 'ꆰ', 'R': 'ꋪ', 'S': 'ꌚ', 'T': 'ꋖ', 'U': 'ꐇ', 'V': 'ꃴ', 'W': 'ꅐ', 'X': '꒼',
+    'Y': 'ꐞ', 'Z': 'ꁴ',
+    'a': 'ꌚ', 'b': 'ꃳ', 'c': 'ꏸ', 'd': 'ꁕ', 'e': 'ꏂ', 'f': 'ꄙ', 'g': 'ꁍ', 'h': 'ꀍ',
+    'i': 'ꂑ', 'j': 'ꀪ', 'k': 'ꀗ', 'l': '꒒', 'm': 'ꁒ', 'n': 'ꁹ', 'o': 'ꁏ', 'p': 'ꉣ',
+    'q': 'ꆰ', 'r': 'ꋪ', 's': 'ꌚ', 't': 'ꋖ', 'u': 'ꐇ', 'v': 'ꃴ', 'w': 'ꅐ', 'x': '꒼',
+    'y': 'ꐞ', 'z': 'ꁴ'
+  },
+  prime: {
+    'A': 'α', 'B': 'ɓ', 'C': '૮', 'D': 'ɗ', 'E': 'ε', 'F': 'f', 'G': 'ɠ', 'H': 'ɦ',
+    'I': 'เ', 'J': 'ʝ', 'K': 'ҡ', 'L': 'ℓ', 'M': 'ɱ', 'N': 'ɳ', 'O': 'σ', 'P': 'ρ',
+    'Q': 'ϙ', 'R': '૨', 'S': 'ร', 'T': 'ƚ', 'U': 'υ', 'V': 'ν', 'W': 'ω', 'X': 'x',
+    'Y': 'ყ', 'Z': 'ȥ',
+    'a': 'α', 'b': 'ɓ', 'c': '૮', 'd': 'ɗ', 'e': 'ε', 'f': 'f', 'g': 'ɠ', 'h': 'ɦ',
+    'i': 'เ', 'j': 'ʝ', 'k': 'ҡ', 'l': 'ℓ', 'm': 'ɱ', 'n': 'ɳ', 'o': 'σ', 'p': 'ρ',
+    'q': 'ϙ', 'r': '૨', 's': 'ร', 't': 'ƚ', 'u': 'υ', 'v': 'ν', 'w': 'ω', 'x': 'x',
+    'y': 'ყ', 'z': 'ȥ'
+  },
+  fantasy: {
+    'A': 'Ꭿ', 'B': 'Ᏸ', 'C': 'Ꮳ', 'D': 'Ꮓ', 'E': 'Ꮛ', 'F': 'Ғ', 'G': 'Ꮆ', 'H': 'Ꮒ',
+    'I': 'Ꭵ', 'J': 'Ꮰ', 'K': 'Ꮶ', 'L': 'Ꮭ', 'M': 'Ꮇ', 'N': 'Ꮑ', 'O': 'Ꮎ', 'P': 'Ꭾ',
+    'Q': 'Ꭴ', 'R': 'Ꮢ', 'S': 'Ꮥ', 'T': 'Ꮦ', 'U': 'Ꮜ', 'V': 'Ꮙ', 'W': 'Ꮗ', 'X': '᙭',
+    'Y': '¥', 'Z': 'Ꮓ',
+    'a': 'λ', 'b': 'Ᏸ', 'c': 'ƈ', 'd': 'ძ', 'e': 'ε', 'f': 'ƒ', 'g': 'ɠ', 'h': 'ɦ',
+    'i': 'ί', 'j': 'ʝ', 'k': 'ƙ', 'l': 'ℓ', 'm': 'ɱ', 'n': 'ŋ', 'o': 'σ', 'p': 'ρ',
+    'q': 'ϙ', 'r': 'ɾ', 's': 'ʂ', 't': 'ƚ', 'u': 'υ', 'v': 'ν', 'w': 'ω', 'x': 'χ',
+    'y': 'ყ', 'z': 'ȥ'
+  },
+  adaptive: {
+    'A': 'ɑ', 'B': 'в', 'C': 'c', 'D': '∂', 'E': 'є', 'F': 'ғ', 'G': 'g', 'H': 'н',
+    'I': 'ι', 'J': 'נ', 'K': 'κ', 'L': 'ℓ', 'M': 'м', 'N': 'и', 'O': 'σ', 'P': 'ρ',
+    'Q': 'ǫ', 'R': 'я', 'S': 'ѕ', 'T': 'т', 'U': 'υ', 'V': 'ν', 'W': 'ω', 'X': 'χ',
+    'Y': 'у', 'Z': 'z',
+    'a': 'ɑ', 'b': 'в', 'c': 'c', 'd': '∂', 'e': 'є', 'f': 'ғ', 'g': 'g', 'h': 'н',
+    'i': 'ι', 'j': 'נ', 'k': 'κ', 'l': 'ℓ', 'm': 'м', 'n': 'и', 'o': 'σ', 'p': 'ρ',
+    'q': 'ǫ', 'r': 'я', 's': 'ѕ', 't': 'т', 'u': 'υ', 'v': 'ν', 'w': 'ω', 'x': 'χ',
+    'y': 'у', 'z': 'z'
+  },
+  varied: {
+    'A': 'α', 'B': 'Ⴆ', 'C': 'ƈ', 'D': 'ԃ', 'E': 'ҽ', 'F': 'ϝ', 'G': 'ɠ', 'H': 'ԋ',
+    'I': 'ι', 'J': 'ʝ', 'K': 'ƙ', 'L': 'ʅ', 'M': 'ɱ', 'N': 'ɳ', 'O': 'σ', 'P': 'ρ',
+    'Q': 'ϙ', 'R': 'ɾ', 'S': 'ʂ', 'T': 'ƚ', 'U': 'υ', 'V': 'ʋ', 'W': 'ɯ', 'X': 'x',
+    'Y': 'ყ', 'Z': 'ȥ',
+    'a': 'α', 'b': 'Ⴆ', 'c': 'ƈ', 'd': 'ԃ', 'e': 'ҽ', 'f': 'ϝ', 'g': 'ɠ', 'h': 'ԋ',
+    'i': 'ι', 'j': 'ʝ', 'k': 'ƙ', 'l': 'ʅ', 'm': 'ɱ', 'n': 'ɳ', 'o': 'σ', 'p': 'ρ',
+    'q': 'ϙ', 'r': 'ɾ', 's': 'ʂ', 't': 'ƚ', 'u': 'υ', 'v': 'ʋ', 'w': 'ɯ', 'x': 'x',
+    'y': 'ყ', 'z': 'ȥ'
+  },
+  striped: {
+    'A': '₳', 'B': '฿', 'C': '₵', 'D': 'Đ', 'E': 'Ɇ', 'F': '₣', 'G': '₲', 'H': 'Ⱨ',
+    'I': 'ł', 'J': 'J', 'K': '₭', 'L': 'Ⱡ', 'M': '₥', 'N': '₦', 'O': 'Ø', 'P': '₱',
+    'Q': 'Q', 'R': 'Ɽ', 'S': '₴', 'T': '₮', 'U': 'Ʉ', 'V': 'V', 'W': '₩', 'X': 'Ӿ',
+    'Y': 'Ɏ', 'Z': 'Ⱬ',
+    'a': '₳', 'b': '฿', 'c': '₵', 'd': 'Đ', 'e': 'Ɇ', 'f': '₣', 'g': '₲', 'h': 'Ⱨ',
+    'i': 'ł', 'j': 'J', 'k': '₭', 'l': 'Ⱡ', 'm': '₥', 'n': '₦', 'o': 'Ø', 'p': '₱',
+    'q': 'Q', 'r': 'Ɽ', 's': '₴', 't': '₮', 'u': 'Ʉ', 'v': 'V', 'w': '₩', 'x': 'Ӿ',
+    'y': 'Ɏ', 'z': 'Ⱬ'
+  },
+  modern: {
+    'A': 'Δ', 'B': 'β', 'C': 'Ͼ', 'D': 'D', 'E': 'Σ', 'F': 'F', 'G': 'Ǥ', 'H': 'Ħ',
+    'I': 'ł', 'J': 'J', 'K': 'Қ', 'L': '∟', 'M': 'M', 'N': 'И', 'O': 'Ө', 'P': 'Ҏ',
+    'Q': 'Ǭ', 'R': 'Я', 'S': 'Ș', 'T': 'Ŧ', 'U': 'Ц', 'V': 'V', 'W': 'Ш', 'X': 'Ӿ',
+    'Y': 'Ұ', 'Z': 'Ƶ',
+    'a': 'Δ', 'b': 'β', 'c': 'Ͼ', 'd': 'D', 'e': 'Σ', 'f': 'F', 'g': 'Ǥ', 'h': 'Ħ',
+    'i': 'ł', 'j': 'J', 'k': 'Қ', 'l': '∟', 'm': 'M', 'n': 'И', 'o': 'Ө', 'p': 'Ҏ',
+    'q': 'Ǭ', 'r': 'Я', 's': 'Ș', 't': 'Ŧ', 'u': 'Ц', 'v': 'V', 'w': 'Ш', 'x': 'Ӿ',
+    'y': 'Ұ', 'z': 'Ƶ'
+  },
+  playful: {
+    'A': 'ǟ', 'B': 'ɮ', 'C': 'ƈ', 'D': 'ɖ', 'E': 'ɛ', 'F': 'ʄ', 'G': 'ɢ', 'H': 'ɦ',
+    'I': 'ɨ', 'J': 'ʝ', 'K': 'ӄ', 'L': 'ʟ', 'M': 'ʍ', 'N': 'ռ', 'O': 'օ', 'P': 'ք',
+    'Q': 'զ', 'R': 'ʀ', 'S': 'ֆ', 'T': 'ȶ', 'U': 'ʊ', 'V': 'ʋ', 'W': 'ա', 'X': 'Ӽ',
+    'Y': 'ʏ', 'Z': 'ʐ',
+    'a': 'ǟ', 'b': 'ɮ', 'c': 'ƈ', 'd': 'ɖ', 'e': 'ɛ', 'f': 'ʄ', 'g': 'ɢ', 'h': 'ɦ',
+    'i': 'ɨ', 'j': 'ʝ', 'k': 'ӄ', 'l': 'ʟ', 'm': 'ʍ', 'n': 'ռ', 'o': 'օ', 'p': 'ք',
+    'q': 'զ', 'r': 'ʀ', 's': 'ֆ', 't': 'ȶ', 'u': 'ʊ', 'v': 'ʋ', 'w': 'ա', 'x': 'Ӽ',
+    'y': 'ʏ', 'z': 'ʐ'
+  },
+  antique: {
+    'A': 'α', 'B': 'в', 'C': '¢', 'D': '∂', 'E': 'є', 'F': 'ƒ', 'G': 'g', 'H': 'н',
+    'I': 'ι', 'J': 'נ', 'K': 'к', 'L': 'ℓ', 'M': 'м', 'N': 'η', 'O': 'σ', 'P': 'ρ',
+    'Q': 'q', 'R': 'я', 'S': 'ѕ', 'T': 'т', 'U': 'υ', 'V': 'ν', 'W': 'ω', 'X': 'χ',
+    'Y': 'у', 'Z': 'z',
+    'a': 'α', 'b': 'в', 'c': '¢', 'd': '∂', 'e': 'є', 'f': 'ƒ', 'g': 'g', 'h': 'н',
+    'i': 'ι', 'j': 'נ', 'k': 'к', 'l': 'ℓ', 'm': 'м', 'n': 'η', 'o': 'σ', 'p': 'ρ',
+    'q': 'q', 'r': 'я', 's': 'ѕ', 't': 'т', 'u': 'υ', 'v': 'ν', 'w': 'ω', 'x': 'χ',
+    'y': 'у', 'z': 'z'
+  },
+  gentle: {
+    'A': 'ɑ', 'B': 'Ⴆ', 'C': 'ƈ', 'D': 'ɗ', 'E': 'ҽ', 'F': 'ϝ', 'G': 'ɠ', 'H': 'ԋ',
+    'I': 'ι', 'J': 'ʝ', 'K': 'ƙ', 'L': 'ʅ', 'M': 'ɱ', 'N': 'ɳ', 'O': 'σ', 'P': 'ρ',
+    'Q': 'ϙ', 'R': 'ɾ', 'S': 'ʂ', 'T': 'ƚ', 'U': 'υ', 'V': 'ʋ', 'W': 'ɯ', 'X': 'x',
+    'Y': 'ყ', 'Z': 'ȥ',
+    'a': 'ɑ', 'b': 'Ⴆ', 'c': 'ƈ', 'd': 'ɗ', 'e': 'ҽ', 'f': 'ϝ', 'g': 'ɠ', 'h': 'ԋ',
+    'i': 'ι', 'j': 'ʝ', 'k': 'ƙ', 'l': 'ʅ', 'm': 'ɱ', 'n': 'ɳ', 'o': 'σ', 'p': 'ρ',
+    'q': 'ϙ', 'r': 'ɾ', 's': 'ʂ', 't': 'ƚ', 'u': 'υ', 'v': 'ʋ', 'w': 'ɯ', 'x': 'x',
+    'y': 'ყ', 'z': 'ȥ'
+  },
+  trendy: {
+    'A': 'ȶ', 'B': 'ɓ', 'C': 'ƈ', 'D': 'ɗ', 'E': 'ɛ', 'F': 'ʄ', 'G': 'ɠ', 'H': 'ɦ',
+    'I': 'ɨ', 'J': 'ʝ', 'K': 'ӄ', 'L': 'ʟ', 'M': 'ɱ', 'N': 'ɲ', 'O': 'ơ', 'P': 'ρ',
+    'Q': 'ǫ', 'R': 'ɾ', 'S': 'ʂ', 'T': 'ȶ', 'U': 'ư', 'V': 'ʋ', 'W': 'ɯ', 'X': 'x',
+    'Y': 'ყ', 'Z': 'ȥ',
+    'a': 'ȶ', 'b': 'ɓ', 'c': 'ƈ', 'd': 'ɗ', 'e': 'ɛ', 'f': 'ʄ', 'g': 'ɠ', 'h': 'ɦ',
+    'i': 'ɨ', 'j': 'ʝ', 'k': 'ӄ', 'l': 'ʟ', 'm': 'ɱ', 'n': 'ɲ', 'o': 'ơ', 'p': 'ρ',
+    'q': 'ǫ', 'r': 'ɾ', 's': 'ʂ', 't': 'ȶ', 'u': 'ư', 'v': 'ʋ', 'w': 'ɯ', 'x': 'x',
+    'y': 'ყ', 'z': 'ȥ'
+  },
+  shadow: {
+    'A': 'ᔕ', 'B': 'ᗷ', 'C': 'ᑕ', 'D': 'ᗫ', 'E': 'E', 'F': 'ᖴ', 'G': 'ᘜ', 'H': 'ᕼ',
+    'I': 'I', 'J': 'ᒍ', 'K': 'K', 'L': 'ᒪ', 'M': 'ᗰ', 'N': 'ᑎ', 'O': 'O', 'P': 'ᑭ',
+    'Q': 'ᑫ', 'R': 'ᖇ', 'S': 'ᔕ', 'T': 'T', 'U': 'ᑌ', 'V': 'ᐯ', 'W': 'ᗯ', 'X': '᙭',
+    'Y': 'Y', 'Z': 'ᘔ',
+    'a': 'ᔕ', 'b': 'ᗷ', 'c': 'ᑕ', 'd': 'ᗫ', 'e': 'E', 'f': 'ᖴ', 'g': 'ᘜ', 'h': 'ᕼ',
+    'i': 'I', 'j': 'ᒍ', 'k': 'K', 'l': 'ᒪ', 'm': 'ᗰ', 'n': 'ᑎ', 'o': 'O', 'p': 'ᑭ',
+    'q': 'ᑫ', 'r': 'ᖇ', 's': 'ᔕ', 't': 'T', 'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭',
+    'y': 'Y', 'z': 'ᘔ'
   }
 };
 
-// Function to transform text using a character map
+// Transform functions
 function transformWithMap(text: string, mapKey: string): string {
   const map = charMaps[mapKey];
   if (!map) return text;
-  
   return text.split('').map(char => map[char] || char).join('');
 }
 
-// Strikethrough adds combining character
 function strikethrough(text: string): string {
   return text.split('').map(char => char + '\u0336').join('');
 }
 
-// Upside down also reverses the string
+function underline(text: string): string {
+  return text.split('').map(char => char + '\u0332').join('');
+}
+
+function doubleUnderline(text: string): string {
+  return text.split('').map(char => char + '\u0333').join('');
+}
+
+function slashOverlay(text: string): string {
+  return text.split('').map(char => char + '\u0337').join('');
+}
+
+function waveOverlay(text: string): string {
+  return text.split('').map(char => char + '\u0334').join('');
+}
+
+function crowned(text: string): string {
+  return text.split('').map(char => char + '\u030A').join('');
+}
+
+function wavyAccent(text: string): string {
+  return text.split('').map(char => char + '\u0303').join('');
+}
+
+function pointedAccent(text: string): string {
+  return text.split('').map(char => char + '\u0302').join('');
+}
+
+function dotAbove(text: string): string {
+  return text.split('').map(char => char + '\u0307').join('');
+}
+
 function upsideDown(text: string): string {
   const map = charMaps.upsideDown;
   return text.split('').map(char => map[char] || char).reverse().join('');
 }
 
-// All font styles with their transformers
+function reverseText(text: string): string {
+  return text.split('').reverse().join('');
+}
+
+function connected(text: string, left: string, right: string): string {
+  return text.split('').map(char => char === ' ' ? ' ' : `${left}${char}${right}`).join('');
+}
+
+function framed(text: string, left: string, right: string): string {
+  return text.split('').map(char => char === ' ' ? ' ' : `${left}${char}${right}`).join('');
+}
+
+// Random style transformer
+function randomStyle(text: string): string {
+  const styles = ['bold', 'italic', 'cursive', 'gothic', 'doubleStruck', 'sansSerif', 'monospace'];
+  return text.split('').map(char => {
+    if (char === ' ') return ' ';
+    const randomMap = charMaps[styles[Math.floor(Math.random() * styles.length)]];
+    return randomMap[char] || char;
+  }).join('');
+}
+
+// Font style definitions
 export interface FontStyle {
   id: string;
   name: string;
-  category: 'fancy' | 'minimal' | 'cool' | 'decorative';
+  category: string;
   transform: (text: string) => string;
 }
 
 export const fontStyles: FontStyle[] = [
   // Fancy Font Styles
   { id: 'rounded', name: 'Rounded Font', category: 'fancy', transform: (t) => transformWithMap(t, 'rounded') },
+  { id: 'symbolic', name: 'Symbolic Font', category: 'fancy', transform: (t) => transformWithMap(t, 'symbolic') },
   { id: 'vintage', name: 'Vintage Font', category: 'fancy', transform: (t) => transformWithMap(t, 'vintage') },
   { id: 'cursive', name: 'Cursive Font', category: 'fancy', transform: (t) => transformWithMap(t, 'cursive') },
   { id: 'boldCursive', name: 'Bold Cursive Font', category: 'fancy', transform: (t) => transformWithMap(t, 'boldCursive') },
   { id: 'doubleStruck', name: 'Double Struck Font', category: 'fancy', transform: (t) => transformWithMap(t, 'doubleStruck') },
   { id: 'gothic', name: 'Gothic Font', category: 'fancy', transform: (t) => transformWithMap(t, 'gothic') },
   { id: 'boldFraktur', name: 'Bold Fraktur Font', category: 'fancy', transform: (t) => transformWithMap(t, 'boldFraktur') },
+  { id: 'historical', name: 'Historical Font', category: 'fancy', transform: (t) => transformWithMap(t, 'historical') },
+  { id: 'tribal', name: 'Tribal Font', category: 'fancy', transform: (t) => transformWithMap(t, 'tribal') },
+  { id: 'graceful', name: 'Graceful Font', category: 'fancy', transform: (t) => transformWithMap(t, 'graceful') },
   
   // Minimal Stylish Fonts
   { id: 'bold', name: 'Bold Font', category: 'minimal', transform: (t) => transformWithMap(t, 'bold') },
@@ -296,27 +557,84 @@ export const fontStyles: FontStyle[] = [
   { id: 'sansSerif', name: 'Sans-Serif Font', category: 'minimal', transform: (t) => transformWithMap(t, 'sansSerif') },
   { id: 'sansSerifBold', name: 'Sans-Serif Bold Font', category: 'minimal', transform: (t) => transformWithMap(t, 'sansSerifBold') },
   { id: 'sansSerifItalic', name: 'Sans-Serif Italic Font', category: 'minimal', transform: (t) => transformWithMap(t, 'sansSerifItalic') },
-  { id: 'sansSerifBoldItalic', name: 'Sans-Serif Bold Italic Font', category: 'minimal', transform: (t) => transformWithMap(t, 'sansSerifBoldItalic') },
+  { id: 'sansSerifBoldItalic', name: 'Sans-Serif Bold Italic', category: 'minimal', transform: (t) => transformWithMap(t, 'sansSerifBoldItalic') },
   { id: 'monospace', name: 'Monospace Font', category: 'minimal', transform: (t) => transformWithMap(t, 'monospace') },
   { id: 'wide', name: 'Wide Font', category: 'minimal', transform: (t) => transformWithMap(t, 'wide') },
   { id: 'smallCaps', name: 'Small Capital Font', category: 'minimal', transform: (t) => transformWithMap(t, 'smallCaps') },
+  { id: 'parenthesized', name: 'Parenthesized Font', category: 'minimal', transform: (t) => transformWithMap(t, 'parenthesized') },
   
   // Cool Fonts
   { id: 'bubble', name: 'Bubble Font', category: 'cool', transform: (t) => transformWithMap(t, 'bubble') },
+  { id: 'darkBubble', name: 'Dark Bubble Font', category: 'cool', transform: (t) => transformWithMap(t, 'darkBubble') },
   { id: 'square', name: 'Square Font', category: 'cool', transform: (t) => transformWithMap(t, 'square') },
   { id: 'squareFilled', name: 'Square Filled Font', category: 'cool', transform: (t) => transformWithMap(t, 'squareFilled') },
-  { id: 'parenthesized', name: 'Parenthesized Font', category: 'cool', transform: (t) => transformWithMap(t, 'parenthesized') },
+  { id: 'cute', name: 'Cute Font', category: 'cool', transform: (t) => transformWithMap(t, 'cute') },
+  { id: 'upsideDown', name: 'Upside Down Text', category: 'cool', transform: upsideDown },
+  { id: 'superscript', name: 'Small Font', category: 'cool', transform: (t) => transformWithMap(t, 'superscript') },
+  { id: 'subscript', name: 'Subscript Font', category: 'cool', transform: (t) => transformWithMap(t, 'subscript') },
+  { id: 'wavy', name: 'Wavy Font', category: 'cool', transform: (t) => transformWithMap(t, 'wavy') },
+  { id: 'eastern', name: 'Eastern Font', category: 'cool', transform: (t) => transformWithMap(t, 'eastern') },
+  { id: 'reverseText', name: 'Reverse Text', category: 'cool', transform: reverseText },
   
-  // Decorative Fonts
-  { id: 'strikethrough', name: 'Strikethrough Font', category: 'decorative', transform: strikethrough },
-  { id: 'upsideDown', name: 'Upside Down Font', category: 'decorative', transform: upsideDown },
-  { id: 'subscript', name: 'Subscript Font', category: 'decorative', transform: (t) => transformWithMap(t, 'subscript') },
-  { id: 'superscript', name: 'Superscript Font', category: 'decorative', transform: (t) => transformWithMap(t, 'superscript') },
+  // Elegant Fonts
+  { id: 'blendedAsian', name: 'Blended Asian Font', category: 'elegant', transform: (t) => transformWithMap(t, 'blendedAsian') },
+  { id: 'soft', name: 'Soft Font', category: 'elegant', transform: (t) => transformWithMap(t, 'soft') },
+  { id: 'prime', name: 'Prime Font', category: 'elegant', transform: (t) => transformWithMap(t, 'prime') },
+  { id: 'fantasy', name: 'Fantasy Font', category: 'elegant', transform: (t) => transformWithMap(t, 'fantasy') },
+  { id: 'adaptive', name: 'Adaptive Font', category: 'elegant', transform: (t) => transformWithMap(t, 'adaptive') },
+  { id: 'varied', name: 'Varied Font', category: 'elegant', transform: (t) => transformWithMap(t, 'varied') },
+  { id: 'striped', name: 'Striped Font', category: 'elegant', transform: (t) => transformWithMap(t, 'striped') },
+  { id: 'modern', name: 'Modern Font', category: 'elegant', transform: (t) => transformWithMap(t, 'modern') },
+  { id: 'shadow', name: 'Shadow Font', category: 'elegant', transform: (t) => transformWithMap(t, 'shadow') },
+  
+  // Subtle Fonts  
+  { id: 'playful', name: 'Playful Font', category: 'subtle', transform: (t) => transformWithMap(t, 'playful') },
+  { id: 'antique', name: 'Antique Font', category: 'subtle', transform: (t) => transformWithMap(t, 'antique') },
+  { id: 'gentle', name: 'Gentle Font', category: 'subtle', transform: (t) => transformWithMap(t, 'gentle') },
+  { id: 'trendy', name: 'Trendy Font', category: 'subtle', transform: (t) => transformWithMap(t, 'trendy') },
+  
+  // Linear Text Fonts
+  { id: 'underline', name: 'Underline Text', category: 'linear', transform: underline },
+  { id: 'doubleUnderline', name: 'Double Underline', category: 'linear', transform: doubleUnderline },
+  { id: 'strikethrough', name: 'Strikethrough Text', category: 'linear', transform: strikethrough },
+  { id: 'slashOverlay', name: 'Slash Overlay Text', category: 'linear', transform: slashOverlay },
+  { id: 'waveOverlay', name: 'Wave Overlay Text', category: 'linear', transform: waveOverlay },
+  
+  // Crowned & Accented Fonts
+  { id: 'crowned', name: 'Crowned Text', category: 'crowned', transform: crowned },
+  { id: 'wavyAccent', name: 'Wavy Accent', category: 'crowned', transform: wavyAccent },
+  { id: 'pointedAccent', name: 'Pointed Accent', category: 'crowned', transform: pointedAccent },
+  { id: 'dotAbove', name: 'Spotted Text', category: 'crowned', transform: dotAbove },
+  
+  // Connected Fonts
+  { id: 'connected1', name: 'Connected Text', category: 'connected', transform: (t) => connected(t, '⊰', '⊱') },
+  { id: 'connected2', name: 'Sharp', category: 'connected', transform: (t) => connected(t, '⧼', '⧽') },
+  { id: 'connected3', name: 'Enclosed', category: 'connected', transform: (t) => connected(t, '⌠', '⌡') },
+  { id: 'connected4', name: 'Lunar', category: 'connected', transform: (t) => connected(t, '☾', '☽') },
+  { id: 'connected5', name: 'Curved Light', category: 'connected', transform: (t) => connected(t, '╰', '╯') },
+  
+  // Framed Fonts
+  { id: 'framed1', name: 'Bold Edge', category: 'framed', transform: (t) => framed(t, '【', '】') },
+  { id: 'framed2', name: 'Corner Glow', category: 'framed', transform: (t) => framed(t, '『', '』') },
+  { id: 'framed3', name: 'Soft Angles', category: 'framed', transform: (t) => framed(t, '〖', '〗') },
+  { id: 'framed4', name: 'Triple Beam', category: 'framed', transform: (t) => framed(t, '⚞', '⚟') },
+  { id: 'framed5', name: 'Frame', category: 'framed', transform: (t) => framed(t, '⦓', '⦔') },
+  
+  // Random Fonts
+  { id: 'random1', name: 'Random Style 1', category: 'random', transform: randomStyle },
+  { id: 'random2', name: 'Random Style 2', category: 'random', transform: randomStyle },
+  { id: 'random3', name: 'Random Style 3', category: 'random', transform: randomStyle },
 ];
 
 export const categories = [
   { id: 'fancy', name: 'Fancy Font Styles' },
   { id: 'minimal', name: 'Minimal Stylish Fonts' },
   { id: 'cool', name: 'Cool Fonts' },
-  { id: 'decorative', name: 'Decorative Fonts' },
+  { id: 'elegant', name: 'Elegant Fonts' },
+  { id: 'subtle', name: 'Subtle Fonts' },
+  { id: 'linear', name: 'Linear Text Fonts' },
+  { id: 'crowned', name: 'Crowned & Accented' },
+  { id: 'connected', name: 'Connected Fonts' },
+  { id: 'framed', name: 'Framed Fonts' },
+  { id: 'random', name: 'Random Fonts' },
 ] as const;
