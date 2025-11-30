@@ -5,9 +5,10 @@ import { cn } from "@/lib/utils";
 interface FontCardProps {
   name: string;
   transformedText: string;
+  fontSize?: number;
 }
 
-export const FontCard = ({ name, transformedText }: FontCardProps) => {
+export const FontCard = ({ name, transformedText, fontSize = 18 }: FontCardProps) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -25,7 +26,10 @@ export const FontCard = ({ name, transformedText }: FontCardProps) => {
       <div className="flex items-center justify-between">
         <div className="flex-1 min-w-0 pr-4">
           <p className="text-xs font-medium text-primary/70 mb-1.5">{name}</p>
-          <p className="text-lg text-foreground truncate font-medium">
+          <p 
+            className="text-foreground truncate font-medium"
+            style={{ fontSize: `${fontSize}px` }}
+          >
             {transformedText || "Type something..."}
           </p>
         </div>

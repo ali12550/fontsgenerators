@@ -455,6 +455,56 @@ const charMaps: Record<string, Record<string, string>> = {
     'i': 'I', 'j': 'ᒍ', 'k': 'K', 'l': 'ᒪ', 'm': 'ᗰ', 'n': 'ᑎ', 'o': 'O', 'p': 'ᑭ',
     'q': 'ᑫ', 'r': 'ᖇ', 's': 'ᔕ', 't': 'T', 'u': 'ᑌ', 'v': 'ᐯ', 'w': 'ᗯ', 'x': '᙭',
     'y': 'Y', 'z': 'ᘔ'
+  },
+  emoji: {
+    'A': '🅰️', 'B': '🅱️', 'C': '©️', 'D': '🇩', 'E': '📧', 'F': '🎏', 'G': '🇬', 'H': '♓',
+    'I': 'ℹ️', 'J': '🎷', 'K': '🎋', 'L': '🇱', 'M': 'Ⓜ️', 'N': '🇳', 'O': '🅾️', 'P': '🅿️',
+    'Q': '🇶', 'R': '®️', 'S': '💲', 'T': '✝️', 'U': '⛎', 'V': '✌️', 'W': '〰️', 'X': '❌',
+    'Y': '🎐', 'Z': '💤',
+    'a': '🅰️', 'b': '🅱️', 'c': '©️', 'd': '🇩', 'e': '📧', 'f': '🎏', 'g': '🇬', 'h': '♓',
+    'i': 'ℹ️', 'j': '🎷', 'k': '🎋', 'l': '🇱', 'm': 'Ⓜ️', 'n': '🇳', 'o': '🅾️', 'p': '🅿️',
+    'q': '🇶', 'r': '®️', 's': '💲', 't': '✝️', 'u': '⛎', 'v': '✌️', 'w': '〰️', 'x': '❌',
+    'y': '🎐', 'z': '💤'
+  },
+  oldItalic: {
+    'A': '𐌀', 'B': '𐌁', 'C': '𐌂', 'D': '𐌃', 'E': '𐌄', 'F': '𐌅', 'G': '𐌆', 'H': '𐌇',
+    'I': '𐌉', 'J': '𐌉', 'K': '𐌊', 'L': '𐌋', 'M': '𐌌', 'N': '𐌍', 'O': '𐌏', 'P': '𐌐',
+    'Q': '𐌒', 'R': '𐌓', 'S': '𐌔', 'T': '𐌕', 'U': '𐌖', 'V': '𐌗', 'W': '𐌗', 'X': '𐌗',
+    'Y': '𐌙', 'Z': '𐌑',
+    'a': '𐌀', 'b': '𐌁', 'c': '𐌂', 'd': '𐌃', 'e': '𐌄', 'f': '𐌅', 'g': '𐌆', 'h': '𐌇',
+    'i': '𐌉', 'j': '𐌉', 'k': '𐌊', 'l': '𐌋', 'm': '𐌌', 'n': '𐌍', 'o': '𐌏', 'p': '𐌐',
+    'q': '𐌒', 'r': '𐌓', 's': '𐌔', 't': '𐌕', 'u': '𐌖', 'v': '𐌗', 'w': '𐌗', 'x': '𐌗',
+    'y': '𐌙', 'z': '𐌑'
+  },
+  elegant: {
+    'A': '𝒜', 'B': 'ℬ', 'C': '𝒞', 'D': '𝒟', 'E': 'ℰ', 'F': 'ℱ', 'G': '𝒢', 'H': 'ℋ',
+    'I': 'ℐ', 'J': '𝒥', 'K': '𝒦', 'L': 'ℒ', 'M': 'ℳ', 'N': '𝒩', 'O': '𝒪', 'P': '𝒫',
+    'Q': '𝒬', 'R': 'ℛ', 'S': '𝒮', 'T': '𝒯', 'U': '𝒰', 'V': '𝒱', 'W': '𝒲', 'X': '𝒳',
+    'Y': '𝒴', 'Z': '𝒵',
+    'a': '𝒶', 'b': '𝒷', 'c': '𝒸', 'd': '𝒹', 'e': 'ℯ', 'f': '𝒻', 'g': 'ℊ', 'h': '𝒽',
+    'i': '𝒾', 'j': '𝒿', 'k': '𝓀', 'l': '𝓁', 'm': '𝓂', 'n': '𝓃', 'o': 'ℴ', 'p': '𝓅',
+    'q': '𝓆', 'r': '𝓇', 's': '𝓈', 't': '𝓉', 'u': '𝓊', 'v': '𝓋', 'w': '𝓌', 'x': '𝓍',
+    'y': '𝓎', 'z': '𝓏'
+  },
+  hearts: {
+    'A': '🅐', 'B': '🅑', 'C': '🅒', 'D': '🅓', 'E': '🅔', 'F': '🅕', 'G': '🅖', 'H': '🅗',
+    'I': '🅘', 'J': '🅙', 'K': '🅚', 'L': '🅛', 'M': '🅜', 'N': '🅝', 'O': '🅞', 'P': '🅟',
+    'Q': '🅠', 'R': '🅡', 'S': '🅢', 'T': '🅣', 'U': '🅤', 'V': '🅥', 'W': '🅦', 'X': '🅧',
+    'Y': '🅨', 'Z': '🅩',
+    'a': '🅐', 'b': '🅑', 'c': '🅒', 'd': '🅓', 'e': '🅔', 'f': '🅕', 'g': '🅖', 'h': '🅗',
+    'i': '🅘', 'j': '🅙', 'k': '🅚', 'l': '🅛', 'm': '🅜', 'n': '🅝', 'o': '🅞', 'p': '🅟',
+    'q': '🅠', 'r': '🅡', 's': '🅢', 't': '🅣', 'u': '🅤', 'v': '🅥', 'w': '🅦', 'x': '🅧',
+    'y': '🅨', 'z': '🅩'
+  },
+  currency: {
+    'A': '₳', 'B': '฿', 'C': '₵', 'D': 'Đ', 'E': '€', 'F': '₣', 'G': '₲', 'H': 'Ħ',
+    'I': 'Ɨ', 'J': 'J', 'K': '₭', 'L': '£', 'M': '₥', 'N': '₦', 'O': 'Ø', 'P': '₱',
+    'Q': 'Q', 'R': '₹', 'S': '$', 'T': '₮', 'U': 'Ʉ', 'V': 'V', 'W': '₩', 'X': 'Ӿ',
+    'Y': '¥', 'Z': 'Ƶ',
+    'a': '₳', 'b': '฿', 'c': '₵', 'd': 'đ', 'e': '€', 'f': '₣', 'g': '₲', 'h': 'ħ',
+    'i': 'ɨ', 'j': 'j', 'k': '₭', 'l': '£', 'm': '₥', 'n': '₦', 'o': 'ø', 'p': '₱',
+    'q': 'q', 'r': '₹', 's': '$', 't': '₮', 'u': 'ʉ', 'v': 'v', 'w': '₩', 'x': 'ӿ',
+    'y': '¥', 'z': 'ƶ'
   }
 };
 
@@ -586,6 +636,7 @@ export const fontStyles: FontStyle[] = [
   { id: 'striped', name: 'Striped Font', category: 'elegant', transform: (t) => transformWithMap(t, 'striped') },
   { id: 'modern', name: 'Modern Font', category: 'elegant', transform: (t) => transformWithMap(t, 'modern') },
   { id: 'shadow', name: 'Shadow Font', category: 'elegant', transform: (t) => transformWithMap(t, 'shadow') },
+  { id: 'elegant', name: 'Elegant Font', category: 'elegant', transform: (t) => transformWithMap(t, 'elegant') },
   
   // Subtle Fonts  
   { id: 'playful', name: 'Playful Font', category: 'subtle', transform: (t) => transformWithMap(t, 'playful') },
@@ -624,6 +675,12 @@ export const fontStyles: FontStyle[] = [
   { id: 'random1', name: 'Random Style 1', category: 'random', transform: randomStyle },
   { id: 'random2', name: 'Random Style 2', category: 'random', transform: randomStyle },
   { id: 'random3', name: 'Random Style 3', category: 'random', transform: randomStyle },
+  
+  // Emoji & Special Fonts
+  { id: 'emoji', name: 'Emoji Font', category: 'cool', transform: (t) => transformWithMap(t, 'emoji') },
+  { id: 'oldItalic', name: 'Old Italic Font', category: 'cool', transform: (t) => transformWithMap(t, 'oldItalic') },
+  { id: 'hearts', name: 'Hearts Font', category: 'cool', transform: (t) => transformWithMap(t, 'hearts') },
+  { id: 'currency', name: 'Currency Font', category: 'cool', transform: (t) => transformWithMap(t, 'currency') },
 ];
 
 export const categories = [
