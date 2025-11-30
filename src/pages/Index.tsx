@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { TextInput } from "@/components/TextInput";
 import { FontCategory } from "@/components/FontCategory";
 import { fontStyles, categories } from "@/lib/fontTransformers";
@@ -68,9 +69,7 @@ const Index = () => {
           ))}
         </main>
 
-        <footer className="text-center py-8 text-muted-foreground text-sm border-t border-border/50 mt-12">
-          <p>Type any text above to see it transformed into {fontStyles.length}+ stylish fonts</p>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
