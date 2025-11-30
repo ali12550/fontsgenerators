@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TextInput } from "@/components/TextInput";
 import { FontCategory } from "@/components/FontCategory";
+import { SearchBar } from "@/components/SearchBar";
+import { FontSizeSlider } from "@/components/FontSizeSlider";
+import { CategoryDropdown } from "@/components/CategoryDropdown";
 import { fontStyles, categories } from "@/lib/fontTransformers";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 
 const Index = () => {
   const [inputText, setInputText] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [fontSize, setFontSize] = useState(18);
 
   const getFontsByCategory = (categoryId: string) => {
     return fontStyles.filter((font) => font.category === categoryId);
@@ -18,6 +22,17 @@ const Index = () => {
   const filteredCategories = selectedCategory 
     ? categories.filter(c => c.id === selectedCategory)
     : categories;
+
+  const filteredFontStyles = useMemo(() => {
+    if (!searchQuery.trim()) return fontStyles;
+    return fontStyles.filter((font) =>
+      font.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery]);
+
+  const getFilteredFontsByCategory = (categoryId: string) => {
+    return filteredFontStyles.filter((font) => font.category === categoryId);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -33,7 +48,18 @@ const Index = () => {
         <main>
           <TextInput value={inputText} onChange={setInputText} />
           
-          {/* Category Filter */}
+          {/* Category Dropdown and Search */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+            <CategoryDropdown />
+            <div className="flex-1">
+              <SearchBar value={searchQuery} onChange={setSearchQuery} />
+            </div>
+          </div>
+          
+          {/* Font Size Slider */}
+          <FontSizeSlider value={fontSize} onChange={setFontSize} />
+          
+          {/* Category Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-8">
             <Button
               variant={selectedCategory === null ? "default" : "outline"}
@@ -42,7 +68,6 @@ const Index = () => {
               className="rounded-full"
             >
               All Fonts
-              <ChevronDown className="w-4 h-4 ml-1" />
             </Button>
             {categories.map((category) => (
               <Button
@@ -59,14 +84,27 @@ const Index = () => {
             ))}
           </div>
           
-          {filteredCategories.map((category) => (
-            <FontCategory
-              key={category.id}
-              title={category.name}
-              fonts={getFontsByCategory(category.id)}
-              inputText={inputText || "Preview"}
-            />
-          ))}
+          {/* Font Categories */}
+          {filteredCategories.map((category) => {
+            const categoryFonts = getFilteredFontsByCategory(category.id);
+            if (categoryFonts.length === 0) return null;
+            
+            return (
+              <FontCategory
+                key={category.id}
+                title={category.name}
+                fonts={categoryFonts}
+                inputText={inputText || "Preview"}
+                fontSize={fontSize}
+              />
+            );
+          })}
+          
+          {searchQuery && filteredFontStyles.length === 0 && (
+            <p className="text-center text-muted-foreground py-8">
+              No fonts found matching "{searchQuery}"
+            </p>
+          )}
         </main>
 
         <Footer />

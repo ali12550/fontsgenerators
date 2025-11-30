@@ -5,9 +5,10 @@ interface FontCategoryProps {
   title: string;
   fonts: FontStyle[];
   inputText: string;
+  fontSize?: number;
 }
 
-export const FontCategory = ({ title, fonts, inputText }: FontCategoryProps) => {
+export const FontCategory = ({ title, fonts, inputText, fontSize = 18 }: FontCategoryProps) => {
   return (
     <section className="mb-10">
       <h2 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
@@ -20,6 +21,7 @@ export const FontCategory = ({ title, fonts, inputText }: FontCategoryProps) => 
             key={font.id}
             name={font.name}
             transformedText={font.transform(inputText)}
+            fontSize={fontSize}
           />
         ))}
       </div>
