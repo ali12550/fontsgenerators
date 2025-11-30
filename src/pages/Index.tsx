@@ -109,132 +109,264 @@ const Index = () => {
 
           {/* custom ali start  */}
 
-          <section class="fg-hero">
-    <h1 class="title">Fancy Font Generator for Instagram, TikTok & Social Media</h1>
-    <p class="subtitle">
-        Transform your normal text into stylish, aesthetic, and cool fonts instantly. 
-        Copy & paste anywhere — Instagram bio, captions, Facebook comments, TikTok, Discord, YouTube, or gaming profiles.
+         <style>
+    body {
+        font-family: "Inter", Arial, sans-serif;
+        line-height: 1.7;
+        color: #222;
+        margin: 0;
+        padding: 0;
+        background: #fafafa;
+    }
+
+    .section {
+        width: 100%;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 16px;
+        font-weight: 700;
+        color: #111;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: #4A7BFF;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        border-radius: 3px;
+    }
+
+    .para {
+        margin-bottom: 16px;
+        font-size: 17px;
+        color: #333;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .step-box {
+        padding: 20px;
+        background: #f7f9ff;
+        border-radius: 10px;
+        border: 1px solid #e4e8ff;
+    }
+
+    .step-box h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #3458d1;
+    }
+
+    .feature-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 20px 0;
+        padding: 20px;
+        background: #f6f6f6;
+        border-radius: 10px;
+        border-left: 4px solid #4A7BFF;
+    }
+
+    .feature-box p {
+        display: inline-block;
+        background: #fff;
+        padding: 8px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        font-size: 20px;
+    }
+
+    .use-case {
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #fefefe;
+        border-radius: 10px;
+        border-left: 4px solid #4A7BFF;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .use-case h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .faq-item {
+        padding: 20px;
+        background: #f8f8f8;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: 1px solid #e5e5e5;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #111;
+    }
+
+    @media (max-width: 600px) {
+        .section {
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 24px;
+        }
+        .para {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<!-- Your Content Sections Below -->
+
+<section class="section intro">
+    <h2 class="section-title">About Cool Font Generator</h2>
+    <p class="para">
+        Cool Font Generator is an online tool that converts your normal text into 
+        <strong>180+ fancy, stylish, and aesthetic Unicode fonts</strong>. From cursive to bold, bubble to gothic, 
+        it provides unique styles that you can copy and paste anywhere.
+    </p>
+    <p class="para">
+        These fancy fonts work everywhere—Instagram, WhatsApp, TikTok, Facebook, YouTube, Discord, or your notes 
+        and documents—because they use Unicode characters instead of images.
     </p>
 </section>
 
-<section class="fg-section">
-    <h2>What is a Fancy Font Generator?</h2>
-    <p>
-        A fancy font generator converts normal text into Unicode-based stylish characters. 
-        It doesn’t change the real <strong>font file</strong>; instead, it uses special Unicode symbols that 
-        look like fonts. Because Unicode works everywhere — social media, browsers, mobile apps — 
-        your generated text remains readable and copy-paste friendly across all platforms.
-    </p>
-</section>
+<section class="section how-to-use">
+    <h2 class="section-title">How to Use the Fancy Text Generator</h2>
 
-<section class="fg-section">
-    <h2>How to Use This Font Generator</h2>
-    <ol>
-        <li>Type your text in the input box.</li>
-        <li>Our tool instantly converts it into dozens of aesthetic styles.</li>
-        <li>Scroll through the generated fonts.</li>
-        <li>Click **Copy** to copy any style.</li>
-        <li>Paste it anywhere—Instagram bio, TikTok, Twitter, Discord, WhatsApp.</li>
-    </ol>
-</section>
-
-<section class="fg-section">
-    <h2>Most Popular Fancy Font Styles</h2>
-    <div class="style-list">
-        <p><strong>➤ Cursive Fonts:</strong> Elegant handwriting-style text</p>
-        <p><strong>➤ Bold Fonts:</strong> Strong, attention-grabbing styles</p>
-        <p><strong>➤ Italic Fonts:</strong> Slanted stylish characters</p>
-        <p><strong>➤ Bubble Fonts:</strong> Cute rounded bubble-text look</p>
-        <p><strong>➤ Gothic / Old English:</strong> Dramatic medieval-style fonts</p>
-        <p><strong>➤ Glitch Fonts:</strong> Broken, distorted cyber look</p>
-        <p><strong>➤ Small Caps:</strong> Elegant minimal uppercase text</p>
-        <p><strong>➤ Aesthetic Fonts:</strong> Clean, soft, aesthetic layouts</p>
-        <p><strong>➤ Zalgo Text:</strong> Creepy glitched horror fonts</p>
-        <p><strong>➤ Vaporwave Fonts:</strong> 90s Japanese aesthetic styles</p>
+    <div class="steps">
+        <div class="step-box">
+            <h3>1. Enter Text</h3>
+            <p>Type or paste your normal text into the input box to see instant previews.</p>
+        </div>
+        <div class="step-box">
+            <h3>2. Choose a Style</h3>
+            <p>Scroll through hundreds of unique fonts and pick your favorite one.</p>
+        </div>
+        <div class="step-box">
+            <h3>3. Copy & Paste</h3>
+            <p>Tap the font style to copy it, then paste it anywhere you want.</p>
+        </div>
     </div>
 </section>
 
-<section class="fg-section examples">
-    <h2>Font Generator Examples</h2>
-    <div class="examples-grid">
-        <div class="example-item">𝓕𝓪𝓷𝓬𝔂 𝓣𝓮𝔁𝓽</div>
-        <div class="example-item">𝐂𝐨𝐨𝐥 𝐅𝐨𝐧𝐭𝐬</div>
-        <div class="example-item">𝘈𝘦𝘴𝘵𝘩𝘦𝘵𝘪𝘤</div>
-        <div class="example-item">𝒮𝓉𝓎𝓁𝒾𝓈𝒽</div>
-        <div class="example-item">🅑🅤🅑🅑🅛🅔</div>
-        <div class="example-item">𝖌𝖔𝖙𝖍𝖎𝖈 𝖋𝖔𝖓𝖙</div>
+<section class="section popular-fonts">
+    <h2 class="section-title">Popular Fancy Text Styles</h2>
+    <p class="para">Some of the most loved Unicode font styles include:</p>
+
+    <div class="feature-box">
+        <p>𝒮𝒸𝓇𝒾𝓅𝓉</p>
+        <p>𝔊𝔬𝔱𝔥𝔦𝔠</p>
+        <p>𝐁𝐨𝐥𝐝</p>
+        <p>𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</p>
+        <p>🅑🅤🅑🅑🅛🅔</p>
+        <p>🆂🆀🆄🅰🆁🅴</p>
+    </div>
+
+    <p class="para">
+        Enhance your messages with elegant styles like “𝒯𝒽𝒶𝓃𝓀 𝓎ℴ𝓊”, or make your chats lively with 
+        “𝓖𝓸𝓸𝓭 𝓜𝓸𝓻𝓷𝓲𝓷𝓰 😊”.
+    </p>
+</section>
+
+<section class="section uses">
+    <h2 class="section-title">Where Can You Use Fancy Fonts?</h2>
+
+    <div class="use-case">
+        <h3>📱 Social Media</h3>
+        <p>Make your captions, bios, and posts stand out on Instagram, Facebook, and X (Twitter).</p>
+    </div>
+
+    <div class="use-case">
+        <h3>✨ Instagram Fonts</h3>
+        <p>Use aesthetic bubble, cursive, bold, or monospace styles for bios, comments, and captions.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>👍 Facebook Fonts</h3>
+        <p>Highlight posts and comments using stylish Unicode text and cool numbers like ❶❷❸.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>🐦 Twitter (X) Fonts</h3>
+        <p>Since Twitter doesn’t offer formatting, this tool helps you bold, italicize, or stylize text easily.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>💬 Messaging</h3>
+        <p>Make WhatsApp and Messenger chats fun and expressive with unique fancy text.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>🔢 Fancy Number Symbols</h3>
+        <p>Use circled numbers (❶❷❸), bold digits, and more for creative lists and posts.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>💼 Business Promotions</h3>
+        <p>Create eye-catching headlines like “𝐅𝐥𝐚𝐭 𝟓𝟎% 𝐎𝐟𝐟” or stylish product announcements.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>📚 Education</h3>
+        <p>Add stylish headings, highlighted text, or aesthetic titles to your notes.</p>
+    </div>
+
+    <div class="use-case">
+        <h3>🎨 Fancy Name</h3>
+        <p>Generate stylish versions of your name using cursive, bold, gothic, or cute fonts.</p>
     </div>
 </section>
 
-<section class="fg-section">
-    <h2>Where Can You Use These Fonts?</h2>
-    <p>You can use these fancy fonts on almost every platform:</p>
-    <ul>
-        <li>Instagram bio, name & captions</li>
-        <li>TikTok username & comments</li>
-        <li>Facebook posts & profile names</li>
-        <li>Twitter tweets & bios</li>
-        <li>Discord usernames & channel names</li>
-        <li>YouTube titles & descriptions</li>
-        <li>Roblox, Fortnite, PUBG, Free Fire names</li>
-        <li>WhatsApp messages & status</li>
-        <li>Snapchat text</li>
-    </ul>
+<section class="section faq">
+    <h2 class="section-title">Font Generator FAQs</h2>
+
+    <div class="faq-item">
+        <h3>What is a Font Generator?</h3>
+        <p>A tool that transforms plain text into fancy Unicode fonts you can copy and paste anywhere.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What are copy & paste fonts?</h3>
+        <p>These are Unicode characters designed to look like stylish fonts across all devices.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can screen readers read fancy text?</h3>
+        <p>Screen readers may pronounce Unicode differently depending on accessibility settings.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How to change fonts on Instagram?</h3>
+        <p>Simply copy the text from this generator and paste it into your Instagram bio or caption.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Where can I use stylish fonts?</h3>
+        <p>On Instagram, Facebook, Twitter, WhatsApp, TikTok, YouTube, Discord, and more.</p>
+    </div>
 </section>
 
-<section class="fg-section">
-    <h2>Is This Font Generator Safe?</h2>
-    <p>
-        Yes, it's 100% safe. We don’t store your text or collect any personal information. 
-        The tool works on your browser using Unicode transformation.
-    </p>
-</section>
-
-<section class="fg-section long-content">
-    <h2>Why Fancy Fonts Work Everywhere</h2>
-    <p>
-        Many new users think these tools “install fonts,” but that’s not true. 
-        They work using **Unicode**, a universal character system that contains thousands of 
-        decorative characters. Because Unicode works across:
-    </p>
-    <ul>
-        <li>iOS</li>
-        <li>Android</li>
-        <li>Windows</li>
-        <li>macOS</li>
-        <li>Web browsers</li>
-    </ul>
-    <p>…the text remains compatible everywhere.</p>
-</section>
-
-<section class="fg-section faq">
-    <h2>Frequently Asked Questions</h2>
-    <h3>1. Can I use these fonts on Instagram?</h3>
-    <p>Yes! All fonts work perfectly on Instagram bio, captions, reels, and name fields.</p>
-
-    <h3>2. Do these fonts work on TikTok?</h3>
-    <p>Yes. Almost all Unicode fonts work on TikTok usernames and captions.</p>
-
-    <h3>3. Why do some fonts not show on older devices?</h3>
-    <p>Some phones (especially old Androids) don’t support certain Unicode characters.</p>
-
-    <h3>4. Will these fonts help me get more engagement?</h3>
-    <p>
-        Stylish text creates a visual hook and helps your profile stand out, 
-        increasing engagement on bios and captions.
-    </p>
-
-    <h3>5. Is this tool free?</h3>
-    <p>Yes, totally free and unlimited usage.</p>
-</section>
-
-<section class="fg-section">
-    <h2>Conclusion</h2>
-    <p>
-        This Fancy Font Generator helps you create aesthetic, stylish, cool, bold, cute, 
-        and unique fonts in just one click. Use them anywhere to make your profile stand out.
-    </p>
-</section>
 
           {/* custom ali end */}
         </main>
